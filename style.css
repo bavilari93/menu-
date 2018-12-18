@@ -66,27 +66,44 @@ body {
     list-style-type: none; }
     .menu ul li {
       color: grey;
-      z-index: 2;
-      margin: 2rem;
+      z-index: 10;
       font-size: 1rem;
       text-transform: uppercase;
       cursor: pointer;
       animation: up 1s ease 1;
-      animation-delay: 1.6s; }
+      animation-delay: 1.6s;
+      opacity: .3; }
+      .menu ul li:nth-child(even):before {
+        margin-top: .2rem; }
+      .menu ul li:nth-child(odd):before {
+        margin-bottom: .2rem; }
       .menu ul li:before {
         content: attr(data-bf);
         position: absolute;
         color: grey;
         z-index: 1;
-        font-size: 2rem;
+        font-size: 5rem;
         opacity: .1;
-        margin-left: -1.5rem;
-        margin-top: -1rem; }
+        margin-left: -7rem;
+        margin-top: -6rem; }
       .menu ul li:hover {
         color: transparent; }
         .menu ul li:hover:before {
-          opacity: .3;
-          margin-top: -1rem; }
+          opacity: .3; }
+
+.test {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 60Vh;
+  width: 100vw;
+  overflow: scroll; }
+  .test ul {
+    list-style-type: none; }
+  .test li {
+    font-size: 10rem; }
 
 @keyframes line {
   0% {
